@@ -73,11 +73,11 @@ func testMW(t *testing.T, config DBConfig) {
 			case 0:
 				query := "SET timezone TO 'Asia/Tokyo'"
 				mock.ExpectExec(query).WillReturnResult(sqlmock.NewResult(0, 0))
-				_, err = resolver.Exec(context.Background(), query)
+				_, err = resolver.Exec(query)
 			case 1:
 				query := "CREATE DATABASE test; use test"
 				mock.ExpectExec(query).WillReturnResult(sqlmock.NewResult(0, 0)).WillDelayFor(time.Millisecond * 50)
-				_, err = resolver.Exec(context.Background(), query)
+				_, err = resolver.ExecContext(context.Background(), query)
 			case 2:
 				t.Log("transactions:begin")
 
