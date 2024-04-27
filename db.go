@@ -23,8 +23,7 @@ type DB interface {
 	// Conn only available for the primary db or the first primary db (if using multi-primary)
 	Conn(ctx context.Context) (Conn, error)
 	Driver() driver.Driver
-	Exec(query string, args ...interface{}) (sql.Result, error)
-	ExecContext(ctx context.Context, query string, args ...interface{}) (sql.Result, error)
+	Exec(ctx context.Context, query string, args ...interface{}) (sql.Result, error)
 	Ping() error
 	PingContext(ctx context.Context) error
 	Prepare(query string) (Stmt, error)
@@ -114,14 +113,7 @@ func (db *sqlDB) BeginTx(ctx context.Context, opts *sql.TxOptions) (Tx, error) {
 // Exec executes a query without returning any rows.
 // The args are for any placeholder parameters in the query.
 // Exec uses the RW-database as the underlying db connection
-func (db *sqlDB) Exec(query string, args ...interface{}) (sql.Result, error) {
-	return db.ExecContext(context.Background(), query, args...)
-}
-
-// ExecContext executes a query without returning any rows.
-// The args are for any placeholder parameters in the query.
-// Exec uses the RW-database as the underlying db connection
-func (db *sqlDB) ExecContext(ctx context.Context, query string, args ...interface{}) (sql.Result, error) {
+func (db *sqlDB) Exec(ctx context.Context, query string, args ...interface{}) (sql.Result, error) {
 	return db.ReadWrite().ExecContext(ctx, query, args...)
 }
 

@@ -49,7 +49,7 @@ func ExampleNew() {
 
 	defer connectionDB.Close()
 	// now you can use the connection for all DB operation
-	_, err = connectionDB.ExecContext(context.Background(), "DELETE FROM book WHERE id=$1") // will use primaryDB
+	_, err = connectionDB.Exec(context.Background(), "DELETE FROM book WHERE id=$1") // will use primaryDB
 	if err != nil {
 		log.Print("go error when executing the query to the DB", err)
 	}
