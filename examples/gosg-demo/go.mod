@@ -1,10 +1,10 @@
-module github.com/bxcodec/dbresolver/v2/examples/gosg-demo
+module github.com/Flo4604/dbresolver/v2/examples/gosg-demo
 
 go 1.20
 
 require (
 	github.com/Masterminds/squirrel v1.5.4
-	github.com/bxcodec/dbresolver/v2 v2.0.0-00010101000000-000000000000
+	github.com/Flo4604/dbresolver/v2 v2.0.0-00010101000000-000000000000
 	github.com/labstack/echo/v4 v4.10.2
 	github.com/lib/pq v1.10.9
 )
@@ -25,4 +25,4 @@ require (
 	golang.org/x/text v0.13.0 // indirect
 )
 
-replace github.com/bxcodec/dbresolver/v2 => ../..
+replace github.com/Flo4604/dbresolver/v2 => ../..

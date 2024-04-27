@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"testing"
 
-	"github.com/bxcodec/dbresolver/v2"
+	"github.com/Flo4604/dbresolver/v2"
 )
 
 func TestOptionWithPrimaryDBs(t *testing.T) {

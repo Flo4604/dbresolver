@@ -3,7 +3,7 @@
 Golang Database Resolver and Wrapper for any multiple database connections topology, eg. master-slave replication database, cross-region application.
 
 [![Go](https://github.com/bxcodec/dbresolver/actions/workflows/go.yml/badge.svg?branch=main)](https://github.com/bxcodec/dbresolver/actions/workflows/go.yml)
-[![Go.Dev](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white)](https://pkg.go.dev/github.com/bxcodec/dbresolver/v2?tab=doc)
+[![Go.Dev](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white)](https://pkg.go.dev/github.com/Flo4604/dbresolver/v2?tab=doc)
 
 ## Idea and Inspiration
 
@@ -12,6 +12,7 @@ This DBResolver library will split your connections to correct defined DBs. Eg, 
 Read more for the explanation on this [blog post](https://betterprogramming.pub/create-a-cross-region-rdbms-connection-library-with-dbresolver-5072bed6a7b8)
 
 Excalidraw live [diagram](https://excalidraw.com/#json=DTs8yxHOGF6uLkjnZny4z,RVo8iwhO0Rk6DRGkKuNZTg)
+
 ### Usecase 1: Separated RW and RO Database connection
 
 <details open>
@@ -43,7 +44,7 @@ Excalidraw live [diagram](https://excalidraw.com/#json=DTs8yxHOGF6uLkjnZny4z,RVo
 <details open>
 
 <summary>Click to Expand</summary>
-  
+
 - You're using a Multi-Master database topology eg, Aurora Multi-Master
 - ![multi-master](https://user-images.githubusercontent.com/11002383/206953082-c2b1bfa8-050e-4a6e-88e8-e5c7047edd71.png)
 
@@ -52,19 +53,19 @@ Excalidraw live [diagram](https://excalidraw.com/#json=DTs8yxHOGF6uLkjnZny4z,RVo
 ## Support
 
 You can file an [Issue](https://github.com/bxcodec/dbresolver/issues/new).
-See documentation in [Go.Dev](https://pkg.go.dev/github.com/bxcodec/dbresolver/v2?tab=doc)
+See documentation in [Go.Dev](https://pkg.go.dev/github.com/Flo4604/dbresolver/v2?tab=doc)
 
 ## Getting Started
 
 #### Download
 
 ```shell
-go get -u github.com/bxcodec/dbresolver/v2
+go get -u github.com/Flo4604/dbresolver/v2
 ```
 
 # Example
 
-### Implementing DB Resolver using *sql.DB
+### Implementing DB Resolver using \*sql.DB
 
 <details open>
 
@@ -79,7 +80,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/bxcodec/dbresolver/v2"
+	"github.com/Flo4604/dbresolver/v2"
 	_ "github.com/lib/pq"
 )
 

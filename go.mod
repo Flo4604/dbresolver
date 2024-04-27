@@ -1,4 +1,4 @@
-module github.com/bxcodec/dbresolver/v2
+module github.com/Flo4604/dbresolver/v2
 
 go 1.18
 

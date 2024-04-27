@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/bxcodec/dbresolver/v2"
+	"github.com/Flo4604/dbresolver/v2"
 	_ "github.com/lib/pq"
 )
 
